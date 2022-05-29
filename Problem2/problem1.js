@@ -6,9 +6,9 @@ const main = (arg) => {
   for (const num of input[1].split(" ")) {
     a.push(parseInt(num));
   }
-  
-  console.log(n);
-  console.log(N);
-  console.log(a);
+
+  const maxDensity = Math.max(...a);
+  const minDensity = Math.min(...a);
+  console.log(minDensity <= N && N <= maxDensity ? "Yes" : "No");
 };
 main(require("fs").readFileSync("/dev/stdin", "utf8"));
