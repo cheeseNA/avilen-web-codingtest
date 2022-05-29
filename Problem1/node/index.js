@@ -14,7 +14,17 @@ const server = http.createServer((req, res)=>{
          { "num": 15, "text": "huga" }
       ]
    };
-   ans = "answer";
+
+   const numToFizzBuzz = (n) => {
+      return 'Fizz';
+   };
+
+   const ansArray = [];
+   for (let i = 1;i <= 30;i++){
+      ansArray.push(numToFizzBuzz(i));
+   }
+
+   ans = ansArray.join(', ');
 
    res.setHeader('Access-Control-Allow-Origin', '*');
    res.setHeader('Access-Control-Request-Method', '*');
