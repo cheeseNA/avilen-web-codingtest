@@ -16,11 +16,20 @@ const server = http.createServer((req, res)=>{
    };
 
    const numToFizzBuzz = (n) => {
-      return 'Fizz';
+      let FizzBuzzString = '';
+      for (const pattern of queryObject.obj) {
+         if ( n % pattern.num == 0) {
+            FizzBuzzString += pattern.text;
+         }
+      }
+      if (FizzBuzzString == '') {
+         FizzBuzzString = String(n);
+      }
+      return FizzBuzzString;
    };
 
    const ansArray = [];
-   for (let i = 1;i <= 30;i++){
+   for (let i = 1;i <= 30;i++) {
       ansArray.push(numToFizzBuzz(i));
    }
 
