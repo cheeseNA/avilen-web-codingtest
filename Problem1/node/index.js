@@ -16,16 +16,16 @@ const server = http.createServer((req, res)=>{
    };
 
    const numToFizzBuzz = (n) => {
-      let FizzBuzzString = '';
+      const FizzBuzzArray = [];
       for (const pattern of queryObject.obj) {
          if ( n % pattern.num == 0) {
-            FizzBuzzString += pattern.text;
+            FizzBuzzArray.push(pattern.text);
          }
       }
-      if (FizzBuzzString == '') {
-         FizzBuzzString = String(n);
+      if (FizzBuzzArray.length === 0) {
+         FizzBuzzArray.push(String(n));
       }
-      return FizzBuzzString;
+      return FizzBuzzArray.join(' ');
    };
 
    const ansArray = [];
