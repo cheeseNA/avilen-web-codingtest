@@ -8,10 +8,8 @@ const server = http.createServer((req, res)=>{
    // ここに処理を記述してください。
    const queryObject = {
       "obj": [
-         { "num": 4, "text": "fizz" },
-         { "num": 7, "text": "buzz" },
-         { "num": 8, "text": "hoge" },
-         { "num": 15, "text": "huga" }
+         { "num": 3, "text": "Fizz" },
+         { "num": 5, "text": "Buzz" }
       ]
    };
 
